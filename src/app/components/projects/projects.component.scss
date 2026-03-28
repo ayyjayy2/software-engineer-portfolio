@@ -110,6 +110,48 @@ h3 {
   gap: 6px;
 }
 
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.btn-github {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+
+  &:hover {
+    color: var(--text-primary) !important;
+    border-color: rgba(124, 99, 255, 0.4);
+  }
+}
+
+.btn-launch {
+  background: var(--gradient);
+  color: #fff !important;
+
+  &:hover {
+    opacity: 0.88;
+  }
+}
+
 .more-projects {
   text-align: center;
   color: var(--text-muted);

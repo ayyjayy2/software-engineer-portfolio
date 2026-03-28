@@ -28,7 +28,8 @@ export class ProjectsComponent {
         'Map-based UI for route and activity planning',
       ],
       tags: ['Angular', 'Firebase', 'TypeScript', 'Maps API'],
-      github: 'https://github.com/ayyjayc2/ireland-startricks',
+      github: 'https://github.com/ayyjayy2/ireland-startricks',
+      demo: 'https://ireland-stpatricks.web.app/select-user',
       accent: '#7c63ff',
     },
     {
@@ -40,7 +41,7 @@ export class ProjectsComponent {
         'Cultural context woven into lesson content',
       ],
       tags: ['Angular', 'TypeScript', 'HTML', 'CSS'],
-      github: 'https://github.com/ayyjayc2/persian-path',
+      github: 'https://github.com/ayyjayy2/persian-path',
       accent: '#00d4aa',
     },
   ];

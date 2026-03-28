@@ -30,7 +30,7 @@ export class ExperienceComponent {
         'Partnered with Product Owner to deliver user-facing features in Agile workflows',
         'Built fast, interactive UI for exploring large-scale datasets',
         'Created reusable components and scalable backend patterns',
-        'Engineered systems processing 100M+ records daily',
+        'Contributed to systems processing 100M+ records daily',
         'Owned features end-to-end from idea to deployment',
         'Leveraged AI tools (Claude, Copilot) to increase productivity and iteration speed',
       ],

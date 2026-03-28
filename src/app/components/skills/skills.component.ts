@@ -23,22 +23,27 @@ export class SkillsComponent {
     {
       category: 'Frontend',
       icon: '⬡',
-      skills: ['Angular', 'RxJS', 'Angular Material', 'Responsive Design', 'UI Architecture', 'REST API Integration'],
+      skills: ['Angular', 'Responsive Design', 'UI Architecture', 'REST APIs'],
     },
     {
       category: 'Backend',
       icon: '⚙',
-      skills: ['Spring Boot', 'REST APIs', 'Microservices', 'Java EE'],
+      skills: ['Spring Boot', 'REST APIs', 'Microservices', 'Java'],
     },
     {
       category: 'AI & Tools',
       icon: '✦',
-      skills: ['Claude Code', 'GitHub Copilot', 'ChatGPT', 'Git', 'GitHub', 'Swagger', 'Jira'],
+      skills: ['Claude Code', 'Copilot', 'ChatGPT', 'Git', 'GitHub', 'Swagger', 'Jira', 'Confluence'],
+    },
+    {
+      category: 'DevOps & Testing',
+      icon: '▲',
+      skills: ['Jenkins', 'Insomnia'],
     },
     {
       category: 'Practices',
       icon: '◈',
-      skills: ['Agile / Scrum', 'Product Collaboration', 'End-to-End Ownership', 'Code Review', 'Large-Scale Data Systems'],
+      skills: ['Agile / Scrum', 'Product Collaboration', 'Code Review', 'Large-Scale Data Systems'],
     },
   ];
 }
