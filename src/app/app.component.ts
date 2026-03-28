@@ -6,6 +6,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { OutsideTheIdeComponent } from './components/outside-the-ide/outside-the-ide.component';
 import { TrackSectionDirective } from './directives/track-section.directive';
 
 @Component({
@@ -18,6 +19,7 @@ import { TrackSectionDirective } from './directives/track-section.directive';
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
+    OutsideTheIdeComponent,
     TrackSectionDirective,
   ],
   templateUrl: './app.component.html',
