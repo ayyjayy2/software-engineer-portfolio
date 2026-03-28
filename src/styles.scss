@@ -1,0 +1,132 @@
+:root {
+  --bg-primary: #08080f;
+  --bg-secondary: #10101e;
+  --bg-card: #16162a;
+  --accent-purple: #7c63ff;
+  --accent-teal: #00d4aa;
+  --accent-coral: #ff6b8a;
+  --text-primary: #eae8f4;
+  --text-muted: #8b89a8;
+  --border: rgba(124, 99, 255, 0.18);
+  --gradient: linear-gradient(135deg, #7c63ff 0%, #00d4aa 100%);
+}
+
+body.light-mode {
+  --bg-primary: #f5f4ff;
+  --bg-secondary: #ebe9ff;
+  --bg-card: #ffffff;
+  --text-primary: #1a1730;
+  --text-muted: #5c5880;
+  --border: rgba(124, 99, 255, 0.2);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--accent-purple);
+  }
+}
+
+section {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 48px;
+
+  span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(124, 99, 255, 0.12);
+  color: var(--accent-purple);
+  border: 1px solid rgba(124, 99, 255, 0.25);
+}
+
+.tag--teal {
+  background: rgba(0, 212, 170, 0.1);
+  color: var(--accent-teal);
+  border-color: rgba(0, 212, 170, 0.25);
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-purple);
+  border-radius: 3px;
+}
+
+// Fade-in animation
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease both;
+}

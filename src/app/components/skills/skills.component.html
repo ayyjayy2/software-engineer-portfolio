@@ -1,0 +1,22 @@
+<section id="skills">
+  <div class="container">
+    <p class="section-label">What I Know</p>
+    <h2 class="section-title">Skills &amp; <span>Technologies</span></h2>
+
+    <div class="skills-grid">
+      @for (group of skillGroups; track group.category) {
+        <div class="skill-card">
+          <div class="card-header">
+            <span class="skill-icon">{{ group.icon }}</span>
+            <h3>{{ group.category }}</h3>
+          </div>
+          <div class="skill-tags">
+            @for (skill of group.skills; track skill) {
+              <span class="skill-pill">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

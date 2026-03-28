@@ -1,0 +1,41 @@
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Where I've Worked</p>
+    <h2 class="section-title">Work <span>Experience</span></h2>
+
+    <div class="timeline">
+      @for (role of roles; track role.company) {
+        <div class="timeline-item" [class.current]="role.current">
+          <div class="timeline-marker">
+            <div class="dot"></div>
+            <div class="line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="role-header">
+              <div>
+                <h3 class="role-title">{{ role.title }}</h3>
+                <p class="company">
+                  {{ role.company }}
+                  <span class="badge" [class.badge--current]="role.current">
+                    {{ role.current ? 'Current' : role.type }}
+                  </span>
+                </p>
+              </div>
+              <span class="period">{{ role.period }}</span>
+            </div>
+            <ul class="bullets">
+              @for (bullet of role.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+            <div class="tags">
+              @for (tag of role.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
