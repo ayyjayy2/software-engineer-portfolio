@@ -1,0 +1,22 @@
+<section id="outside-the-ide">
+  <div class="container">
+    <p class="section-label">The Human Behind the Work</p>
+    <h2 class="section-title">Outside <span>the IDE</span></h2>
+
+    <div class="hobbies-grid">
+      @for (hobby of hobbies; track hobby.title) {
+        <div class="hobby-card">
+          <div class="card-top">
+            <span class="emoji">{{ hobby.emoji }}</span>
+            @if (hobby.tag) {
+              <span class="hobby-tag" [class]="'hobby-tag--' + hobby.tagColor">{{ hobby.tag }}</span>
+            }
+          </div>
+          <h3>{{ hobby.title }}</h3>
+          <p class="subtitle">{{ hobby.subtitle }}</p>
+          <p class="description">{{ hobby.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -18,6 +18,7 @@ export class NavComponent {
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Outside the IDE', href: '#outside-the-ide' },
     { label: 'Contact', href: '#contact' },
   ];
 
