@@ -27,6 +27,14 @@ export class OutsideTheIdeComponent {
       tagColor: 'purple',
     },
     {
+      emoji: '🎮',
+      title: 'Loftia',
+      subtitle: 'Indie Game · Alpha & Beta Tester',
+      description: 'A cyberpunk-earthy indie game I\'ve followed from the beginning — I became an alpha play tester and will be part of the upcoming beta, too.',
+      tag: 'In Progress',
+      tagColor: 'purple',
+    },
+    {
       emoji: '✈️',
       title: 'Private Pilot',
       subtitle: 'Flight Training · 2022 – 2023',
