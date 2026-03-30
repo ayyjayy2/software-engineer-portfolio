@@ -21,13 +21,13 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       name: 'Ireland Trip Planner',
-      description: 'A visual, interactive travel planning app for logistics, budgeting, and itineraries.',
+      description: 'A collaborative travel planning app with outfit packing, live weather, and shared expense splitting.',
       details: [
+        'Outfit planning page with live weather, listed activities, and outfit images per day',
+        'Expense splitting across multiple users with multi-currency support',
         'Real-time data syncing for collaborative trip planning',
-        'Expense tracking with budget visualization',
-        'Map-based UI for route and activity planning',
       ],
-      tags: ['Angular', 'Firebase', 'TypeScript', 'Maps API'],
+      tags: ['Angular', 'Firebase', 'TypeScript', 'Maps API', 'Weather API'],
       github: 'https://github.com/ayyjayy2/ireland-startricks',
       demo: 'https://ireland-stpatricks.web.app/select-user',
       accent: '#7c63ff',
