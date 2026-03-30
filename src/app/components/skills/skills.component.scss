@@ -1,69 +1,84 @@
+// List layout — category name left column, pills right column
+// Reads as a designed artifact, not a card grid template
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
 }
 
 .skill-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 28px;
-  transition: border-color 0.2s, transform 0.2s;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--s32);
+  align-items: start;
+  padding: var(--s24) 0;
+  border-bottom: 1px solid var(--border);
+  background: none;
+  transition: background 0.2s;
 
   &:hover {
-    border-color: rgba(124, 99, 255, 0.35);
-    transform: translateY(-4px);
+    background: rgba(124, 99, 255, 0.025);
+
+    .skill-icon {
+      color: var(--accent-teal);
+    }
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: var(--s12);
   }
 }
 
 .card-header {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: var(--s4);
+  padding-top: 2px;  // optical alignment with first pill row
 
   h3 {
-    font-size: 16px;
-    font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 }
 
 .skill-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(124, 99, 255, 0.1);
-  border: 1px solid rgba(124, 99, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  color: var(--accent-purple);
-  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-family: 'Syne', sans-serif;
   font-weight: 700;
-  flex-shrink: 0;
+  color: var(--accent-purple);
+  line-height: 1;
+  margin-bottom: var(--s4);
+  transition: color 0.2s;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--s8);
+  padding-top: var(--s4);
 }
 
 .skill-pill {
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
+  padding: var(--s4) var(--s12);
+  border-radius: var(--r-sm);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.03em;
   background: var(--bg-secondary);
   color: var(--text-muted);
   border: 1px solid var(--border);
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition: color 0.15s, border-color 0.15s, background 0.15s, transform 0.15s;
 
   &:hover {
     color: var(--accent-teal);
     border-color: rgba(0, 212, 170, 0.3);
     background: rgba(0, 212, 170, 0.05);
+    transform: scale(1.04);
   }
 }

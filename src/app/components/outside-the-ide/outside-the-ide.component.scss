@@ -1,22 +1,23 @@
 .hobbies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 16px;
 }
 
 .hobby-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: 6px;   // aligned with the design system's sharp treatment
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: border-color 0.2s, transform 0.25s;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 
   &:hover {
-    border-color: rgba(124, 99, 255, 0.35);
+    border-color: rgba(124, 99, 255, 0.4);
     transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(124, 99, 255, 0.08);
   }
 }
 
@@ -28,46 +29,50 @@
 }
 
 .emoji {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1;
 }
 
+// Sharp tags — aligned with global .tag system
 .hobby-tag {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.06em;
 
   &--purple {
-    background: rgba(124, 99, 255, 0.12);
+    background: rgba(124, 99, 255, 0.1);
     color: var(--accent-purple);
-    border: 1px solid rgba(124, 99, 255, 0.25);
+    border: 1px solid rgba(124, 99, 255, 0.22);
   }
 
   &--teal {
-    background: rgba(0, 212, 170, 0.1);
+    background: rgba(0, 212, 170, 0.08);
     color: var(--accent-teal);
-    border: 1px solid rgba(0, 212, 170, 0.25);
+    border: 1px solid rgba(0, 212, 170, 0.22);
   }
 
   &--coral {
-    background: rgba(255, 107, 138, 0.1);
+    background: rgba(255, 107, 138, 0.08);
     color: var(--accent-coral);
-    border: 1px solid rgba(255, 107, 138, 0.25);
+    border: 1px solid rgba(255, 107, 138, 0.22);
   }
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--accent-teal);
-  font-weight: 500;
 }
 
 .description {

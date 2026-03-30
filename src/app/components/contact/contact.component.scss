@@ -1,11 +1,12 @@
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 64px;
   align-items: start;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 48px;
   }
 }
 
@@ -13,35 +14,49 @@
   p {
     font-size: 16px;
     color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 32px;
+    line-height: 1.85;
+    margin-bottom: var(--s32);
   }
 }
 
+// Large display type — creates visual tension with the card column
+.contact-display {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(44px, 6vw, 80px);
+  font-weight: 800;
+  line-height: 0.93;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin-bottom: var(--s32);
+}
+
+// Solid accent button — direct, no gradient
 .email-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 32px;
-  background: var(--gradient);
+  padding: 15px 36px;
+  background: var(--accent-purple);
   color: #fff;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
-    opacity: 0.88;
+    background: #9178ff;
     color: #fff;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: var(--glow-purple);
   }
 }
 
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .contact-card {
@@ -50,22 +65,24 @@
   gap: 16px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 20px 24px;
   text-decoration: none;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     border-color: rgba(124, 99, 255, 0.4);
-    transform: translateX(6px);
+    transform: translateX(8px);
+    box-shadow: -8px 0 32px rgba(124, 99, 255, 0.08);
   }
 }
 
 .contact-icon {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
-  background: rgba(124, 99, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(124, 99, 255, 0.08);
+  border: 1px solid rgba(124, 99, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,11 +91,12 @@
 }
 
 .contact-type {
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
 }
 
 .contact-value {
