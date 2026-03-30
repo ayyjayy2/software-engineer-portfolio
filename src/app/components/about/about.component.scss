@@ -1,56 +1,60 @@
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 60px;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
   align-items: start;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
+    gap: 48px;
   }
 }
 
 .about-text {
   p {
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.85;
     margin-bottom: 20px;
     font-size: 16px;
 
     strong {
       color: var(--text-primary);
+      font-weight: 600;
     }
   }
 }
 
 .about-meta {
   display: flex;
-  gap: 40px;
-  margin-top: 40px;
-  padding-top: 32px;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+  margin-top: 48px;
+  padding-top: 40px;
   border-top: 1px solid var(--border);
 }
 
 .meta-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
+// Syne for display numbers — editorial weight
 .meta-value {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: 'Syne', sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--text-primary);
 }
 
 .meta-label {
-  font-size: 13px;
+  font-size: 11px;
+  font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .about-card {
@@ -61,41 +65,48 @@
 .card-inner {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 6px;
   padding: 36px;
   text-align: center;
-  transition: border-color 0.2s;
+  transition: border-color 0.25s, box-shadow 0.25s;
 
   &:hover {
     border-color: rgba(124, 99, 255, 0.4);
+    box-shadow: var(--shadow-lg);
   }
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--gradient);
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  background: rgba(124, 99, 255, 0.08);
+  border: 1px solid rgba(124, 99, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--accent-purple);
   margin: 0 auto 20px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
   margin-bottom: 4px;
+  letter-spacing: -0.02em;
 }
 
 .role {
   color: var(--accent-teal);
-  font-size: 14px;
-  margin-bottom: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
 }
 
 .quick-info {
@@ -122,16 +133,21 @@ h3 {
 .download-btn {
   display: block;
   padding: 12px;
-  background: var(--gradient);
-  color: #fff;
-  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  border-radius: 4px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: opacity 0.2s;
+  text-align: center;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 
   &:hover {
-    opacity: 0.88;
+    background: var(--accent-purple);
     color: #fff;
+    box-shadow: var(--glow-purple);
   }
 }

@@ -4,13 +4,14 @@ nav {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 20px 0;
+  padding: 22px 0;
   transition: background 0.3s, padding 0.3s, box-shadow 0.3s;
 
   &.scrolled {
-    background: rgba(8, 8, 15, 0.92);
-    backdrop-filter: blur(12px);
-    padding: 12px 0;
+    background: var(--nav-scrolled-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 14px 0;
     box-shadow: 0 1px 0 var(--border);
   }
 }
@@ -21,15 +22,21 @@ nav {
   justify-content: space-between;
 }
 
+// Logo uses Syne — brand identity; stroke outline matches section title treatment
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  background: var(--gradient);
-  -webkit-background-clip: text;
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  -webkit-text-stroke: 1px var(--accent-purple);
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-purple);
   text-decoration: none;
+  transition: -webkit-text-stroke-color 0.2s;
+
+  &:hover {
+    -webkit-text-stroke-color: var(--accent-teal);
+  }
 }
 
 .nav-links {
@@ -39,8 +46,9 @@ nav {
   list-style: none;
 
   a {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
+    letter-spacing: 0.02em;
     color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s;
@@ -50,16 +58,21 @@ nav {
     }
   }
 
+  // CTA: solid button, no gradient
   .cta {
     padding: 8px 20px;
+    background: var(--accent-purple);
     border: 1px solid var(--accent-purple);
-    border-radius: 6px;
-    color: var(--accent-purple) !important;
-    transition: background 0.2s, color 0.2s !important;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: 600;
+    transition: background 0.2s, box-shadow 0.2s !important;
 
     &:hover {
-      background: var(--accent-purple);
+      background: #9178ff;
+      border-color: #9178ff;
       color: #fff !important;
+      box-shadow: 0 8px 24px rgba(124, 99, 255, 0.35);
     }
   }
 }
@@ -70,17 +83,17 @@ nav {
   justify-content: center;
   width: 36px;
   height: 36px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: transparent;
   color: var(--text-muted);
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s, background 0.2s, transform 0.2s;
+  transition: color 0.2s, border-color 0.2s, transform 0.2s;
 
   &:hover {
     color: var(--accent-purple);
-    border-color: var(--accent-purple);
-    transform: rotate(15deg);
+    border-color: rgba(124, 99, 255, 0.4);
+    transform: rotate(18deg);
   }
 }
 
@@ -98,7 +111,7 @@ nav {
     width: 24px;
     height: 2px;
     background: var(--text-primary);
-    border-radius: 2px;
+    border-radius: 0;   // sharp bars
     transition: transform 0.3s, opacity 0.3s;
 
     &:nth-child(1).open { transform: translateY(7px) rotate(45deg); }
@@ -118,6 +131,7 @@ nav {
     right: -100%;
     height: 100vh;
     width: 260px;
+    z-index: 99;
     background: var(--bg-secondary);
     flex-direction: column;
     justify-content: center;

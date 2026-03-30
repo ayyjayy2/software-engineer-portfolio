@@ -7,9 +7,9 @@
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 44px 1fr;
   gap: 24px;
-  padding-bottom: 48px;
+  padding-bottom: 52px;
 
   &:last-child {
     padding-bottom: 0;
@@ -21,7 +21,7 @@
 
   &.current .dot {
     background: var(--accent-purple);
-    box-shadow: 0 0 16px rgba(124, 99, 255, 0.5);
+    box-shadow: 0 0 0 4px rgba(124, 99, 255, 0.15), 0 0 20px rgba(124, 99, 255, 0.5);
   }
 }
 
@@ -29,12 +29,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6px;
+  padding-top: 8px;
 }
 
 .dot {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--bg-card);
   border: 2px solid var(--accent-purple);
@@ -43,22 +43,27 @@
 }
 
 .line {
-  width: 2px;
+  width: 1px;
   flex: 1;
-  background: linear-gradient(to bottom, var(--accent-purple), var(--border));
+  background: linear-gradient(to bottom, rgba(124, 99, 255, 0.5), rgba(124, 99, 255, 0.05));
   margin-top: 8px;
 }
 
 .timeline-content {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 28px 32px;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 
   &:hover {
     border-color: rgba(124, 99, 255, 0.4);
-    transform: translateX(4px);
+    transform: translateX(6px);
+    box-shadow: -6px 0 24px rgba(124, 99, 255, 0.08);
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
   }
 }
 
@@ -75,10 +80,11 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .company {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--accent-teal);
   display: flex;
   align-items: center;
@@ -86,12 +92,14 @@
 }
 
 .badge {
-  font-size: 11px;
-  padding: 2px 8px;
-  border-radius: 10px;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
   background: rgba(139, 137, 168, 0.15);
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 
   &--current {
     background: rgba(124, 99, 255, 0.15);
@@ -100,10 +108,13 @@
 }
 
 .period {
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 500;
   color: var(--text-muted);
   white-space: nowrap;
   margin-top: 4px;
+  letter-spacing: 0.02em;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .bullets {
@@ -118,13 +129,14 @@
     color: var(--text-muted);
     padding-left: 20px;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.65;
 
     &::before {
-      content: '▹';
+      content: '—';
       position: absolute;
       left: 0;
       color: var(--accent-purple);
+      font-size: 12px;
     }
   }
 }
@@ -132,5 +144,5 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }

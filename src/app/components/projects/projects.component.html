@@ -4,12 +4,10 @@
     <h2 class="section-title">Featured <span>Projects</span></h2>
 
     <div class="projects-grid">
-      @for (project of projects; track project.name) {
+      @for (project of projects; track project.name; let i = $index) {
         <div class="project-card" [style.--card-accent]="project.accent">
           <div class="card-top">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-            </div>
+            <span class="project-number">0{{ i + 1 }}</span>
           </div>
 
           <h3>{{ project.name }}</h3>

@@ -1,10 +1,71 @@
+// Scrolling ticker strip — structural separator between hero and content
+.ticker-strip {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 0;
+  background: var(--bg-secondary);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+
+  span {
+    padding: 0 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .sep {
+    padding: 0;
+    color: var(--accent-purple);
+    font-size: 7px;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+  }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 footer {
   border-top: 1px solid var(--border);
-  padding: 24px 0;
-  text-align: center;
+  padding: 28px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+  }
 
   p {
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+  }
+
+  .footer-mark {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-purple);
+    opacity: 0.5;
   }
 }
