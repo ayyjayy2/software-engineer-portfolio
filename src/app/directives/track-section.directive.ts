@@ -8,7 +8,7 @@ export class TrackSectionDirective implements OnInit, OnDestroy {
   @Input('appTrackSection') sectionName = '';
 
   private analytics = inject(AnalyticsService);
-  private observer!: IntersectionObserver;
+  private observer?: IntersectionObserver;
   private hasTracked = false;
 
   constructor(private el: ElementRef) {}
@@ -29,6 +29,6 @@ export class TrackSectionDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.observer.disconnect();
+    this.observer?.disconnect();
   }
 }

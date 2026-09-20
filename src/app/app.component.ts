@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { APP_VERSION } from './version';
 import { NavComponent } from './components/nav/nav.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
@@ -27,4 +28,6 @@ import { TrackSectionDirective } from './directives/track-section.directive';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {}
+export class AppComponent {
+  readonly version = APP_VERSION;
+}
