@@ -9,10 +9,11 @@ interface ConferenceEvent {
   type: string;
 }
 
+/** Dated rows for talks, conferences and meetups. Rendered inside the Record section. */
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrl: './events.component.scss'
+  styleUrl: './events.component.scss',
 })
 export class EventsComponent {
   events: ConferenceEvent[] = [
@@ -25,4 +26,8 @@ export class EventsComponent {
       tags: ['AI', 'LLMs'],
     },
   ];
+
+  meta(event: ConferenceEvent): string {
+    return [event.type, event.location, ...event.tags].join(' · ');
+  }
 }

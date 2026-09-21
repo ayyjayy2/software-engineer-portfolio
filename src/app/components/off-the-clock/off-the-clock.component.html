@@ -1,0 +1,23 @@
+<section id="off-the-clock" class="otc grid12" appReveal>
+  <div class="lead">
+    <p class="kicker">05 — Off the clock</p>
+    <h2 class="section-h">Outside the IDE</h2>
+    <p class="ink-soft">The human behind the work.</p>
+  </div>
+  <div class="content">
+    @for (item of pursuits; track item.title) {
+      <div class="row">
+        <div class="head">
+          <span class="title">
+            {{ item.title }}
+            @if (item.tag) {
+              <span class="tag">{{ item.tag }}</span>
+            }
+          </span>
+          <span class="sub">{{ item.subtitle }}</span>
+        </div>
+        <p class="ink-soft">{{ item.description }}</p>
+      </div>
+    }
+  </div>
+</section>

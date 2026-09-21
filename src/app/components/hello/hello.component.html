@@ -1,0 +1,23 @@
+<section id="hello" class="hello grid12" appReveal>
+  <div class="lead">
+    <p class="kicker">06 — Hello</p>
+    <h2>Let's talk.</h2>
+    <p>
+      I'm looking for a software or product engineering team where I can own real work end to end,
+      keep growing and taking on more ownership, and build alongside a collaborative group. Remote or
+      hybrid both work.
+    </p>
+    <p class="ink-soft">If that sounds like your team, I'd like to hear about it.</p>
+  </div>
+  <div class="links">
+    @for (link of links; track link.label) {
+      <a
+        [href]="link.href"
+        [attr.target]="link.external ? '_blank' : null"
+        [attr.rel]="link.external ? 'noopener' : null">
+        <span class="label">{{ link.label }}</span>
+        <span class="value">{{ link.value }}</span>
+      </a>
+    }
+  </div>
+</section>

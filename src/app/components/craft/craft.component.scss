@@ -1,0 +1,35 @@
+:host { display: block; }
+
+.craft {
+  padding: var(--section-pad) 0;
+  border-top: 1px solid var(--color-text);
+}
+
+.lead {
+  grid-column: 1 / span 4;
+  min-width: 0;
+
+  h2 { margin: 0; }
+}
+
+.content {
+  grid-column: 6 / span 7;
+  min-width: 0;
+}
+
+.stack-row {
+  border-top: 1px solid var(--rule);
+  padding: 14px 0;
+  display: grid;
+  grid-template-columns: minmax(110px, 150px) 1fr;
+  gap: 16px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+.items {
+  font-size: 16px;
+}

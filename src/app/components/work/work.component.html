@@ -1,0 +1,17 @@
+<section id="work" class="work" appReveal>
+  <p class="kicker">02 — Work at Surescripts</p>
+
+  @for (item of work; track item.n) {
+    <article class="row grid12">
+      <div class="num">{{ item.n }}</div>
+      <div class="main">
+        <h3>{{ item.title }}</h3>
+        <p class="ink-soft">{{ item.body }}</p>
+      </div>
+      <div class="side">
+        <span class="label">{{ item.meta }}</span>
+        <span class="stat">{{ item.stat }}</span>
+      </div>
+    </article>
+  }
+</section>

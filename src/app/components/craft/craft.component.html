@@ -1,0 +1,14 @@
+<section id="craft" class="craft grid12" appReveal>
+  <div class="lead">
+    <p class="kicker">04 — Craft</p>
+    <h2 class="section-h">What I reach for</h2>
+  </div>
+  <div class="content">
+    @for (group of stacks; track group.name) {
+      <div class="stack-row">
+        <span class="label">{{ group.name }}</span>
+        <span class="items">{{ group.items }}</span>
+      </div>
+    }
+  </div>
+</section>

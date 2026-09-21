@@ -1,0 +1,39 @@
+:host { display: block; }
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.resume,
+.toggle {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 0 2px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.toggle {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--ink-soft);
+
+  &:hover {
+    color: var(--color-text);
+    border-bottom-color: var(--rule);
+  }
+}
