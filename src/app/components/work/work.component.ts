@@ -27,9 +27,9 @@ export class WorkComponent {
     {
       n: '02',
       title: 'Scoping the work, not just shipping it',
-      body: 'Ran 32 technical spikes to pin down unknowns before the team committed, then started writing the stories myself: 11 authored, 9 of them scoped for other engineers to pick up. Over the same stretch my quarterly output doubled from 19.8 to 40 story points and average story completion fell from 7 days to 4.',
-      meta: 'Ownership, year over year',
-      stat: '32 spikes \u00b7 11 stories authored',
+      body: 'In 2025 I averaged 19.8 story points a quarter. Through the first three quarters of 2026 it is 40, average story completion is down from 7 days to 4, and Q3 2026 is the most productive quarter yet at 29 stories and 46 points. What changed is where I sit in the work: 32 technical spikes to pin down unknowns before the team commits, and since August 2026, 11 Jira stories of my own, 9 of them written for other developers to pick up.',
+      meta: '2025 \u2192 2026',
+      stat: '19.8 \u2192 40 points a quarter',
     },
     {
       n: '03',

@@ -22,11 +22,11 @@ interface TimelineEntry {
 export class RecordComponent {
   ledger: LedgerLine[] = [
     { n: '221', what: 'stories delivered across 19 quarters' },
-    { n: '546', what: 'peer pull requests reviewed — 306 in 2026 alone' },
+    { n: '546', what: 'peer pull requests reviewed — 306 in 2026, 161 more than all of 2025' },
     { n: '65', what: 'repositories touched: Angular, Java services, data pipelines' },
     { n: '33', what: 'internal engineering guides written and kept as team reference' },
     { n: '418', what: 'story points delivered, 65% of stories scoped at 2\u20133 points' },
-    { n: '24', what: 'features demoed to the team across 19 quarters' },
+    { n: '24', what: 'features demoed across 19 quarters — 10 of them in 2026, already past all of 2025' },
   ];
 
   timeline: TimelineEntry[] = [
