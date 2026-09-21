@@ -1,0 +1,34 @@
+<section id="demo" class="demo grid12" appReveal>
+  <div class="copy">
+    <p class="kicker">01 — The app</p>
+    <h2 class="section-h">The Itinerists, running right here</h2>
+    <p class="ink-soft">
+      Angular 19 and TypeScript on a real-time Firestore backend: authentication, security rules,
+      invite-and-join trip sharing, 20+ lazy-loaded feature pages, and an emulator test suite that
+      proves the rules hold.
+    </p>
+    <p class="ink-soft">
+      It started as a single-trip prototype. I re-architected it into a multi-trip platform and wrote
+      the migrations that carried live user data across without breaking a single itinerary. It is
+      still in active development — a small group of travellers use it and tell me what to fix next.
+    </p>
+    <p class="ink-soft">
+      The phone runs a demo build seeded with a sample trip, so there is nothing to sign in to.
+      Add, edit and reorder whatever you like; it all lives only in this session.
+    </p>
+    <div class="links">
+      <a class="link-ul" [href]="appUrl" target="_blank" rel="noopener">Open the live app ↗</a>
+      <button type="button" class="btn-text" (click)="phone.reset()">Reset the phone</button>
+    </div>
+    <dl class="meta">
+      <dt>Stack</dt><dd>Angular 19 · TypeScript · Firestore · RxJS · Leaflet</dd>
+      <dt>Scope</dt><dd>Solo — architecture, UI, data model, release</dd>
+      <dt>Volume</dt><dd>150+ merged pull requests</dd>
+    </dl>
+  </div>
+
+  <div class="frame">
+    <app-phone-frame #phone />
+    <p class="caption">Fig. 1 — the app as it runs today, header and menu included.</p>
+  </div>
+</section>

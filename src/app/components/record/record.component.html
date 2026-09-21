@@ -1,0 +1,43 @@
+<section id="record" class="record" appReveal>
+  <div class="grid12">
+    <div class="lead">
+      <p class="kicker">03 — Record</p>
+      <h2 class="section-h">Nineteen quarters, counted</h2>
+      <p class="ink-soft">I keep receipts on my own output — it's how I know where the time actually goes.</p>
+    </div>
+    <div class="content">
+      @for (line of ledger; track line.n) {
+        <div class="ledger-row">
+          <span class="n">{{ line.n }}</span>
+          <span class="what">{{ line.what }}</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="grid12 block">
+    <div class="lead">
+      <h3 class="sub-h">Where I've been</h3>
+    </div>
+    <div class="content">
+      @for (entry of timeline; track entry.role) {
+        <div class="tl-row">
+          <div class="tl-head">
+            <span class="role">{{ entry.role }}</span>
+            <span class="when">{{ entry.when }}</span>
+          </div>
+          <p class="ink-soft">{{ entry.body }}</p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="grid12 block">
+    <div class="lead">
+      <h3 class="sub-h">In the community</h3>
+    </div>
+    <div class="content">
+      <app-events />
+    </div>
+  </div>
+</section>

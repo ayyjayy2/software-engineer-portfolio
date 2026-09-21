@@ -1,0 +1,24 @@
+<div class="phone-wrap" #wrap>
+  <div class="phone" #phone>
+    @if (!ready()) {
+      <div class="fallback">
+        <span class="fb-title">The Itinerists</span>
+        @if (started()) {
+          <span class="fb-text">Loading a sample trip…</span>
+          <span class="fb-spinner" aria-hidden="true"></span>
+        } @else {
+          <span class="fb-text">A sample trip, no sign-in needed. Anything you change stays in this session.</span>
+          <button type="button" class="fb-load" (click)="load()">Load the demo</button>
+        }
+        <a class="fb-open" [href]="url" target="_blank" rel="noopener">Open in a tab ↗</a>
+      </div>
+    }
+
+    <iframe
+      #frame
+      title="The Itinerists — sample trip demo"
+      allow="clipboard-write"
+      (load)="onLoad()"
+      [class.active]="ready()"></iframe>
+  </div>
+</div>

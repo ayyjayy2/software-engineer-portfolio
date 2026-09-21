@@ -1,0 +1,13 @@
+<div class="topbar">
+  <span class="label">Alayna Johnston — Chicago, remote</span>
+  <div class="actions">
+    <a class="resume" href="Alayna-Johnston-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    <button
+      type="button"
+      class="toggle"
+      (click)="theme.toggle()"
+      [attr.aria-label]="theme.isDark() ? 'Switch to light mode' : 'Switch to dark mode'">
+      {{ theme.isDark() ? 'Light' : 'Dark' }}
+    </button>
+  </div>
+</div>

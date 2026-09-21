@@ -1,42 +1,22 @@
-<app-nav></app-nav>
-<main>
-  <app-hero appTrackSection="hero"></app-hero>
+<div class="wrap">
+  <app-topbar />
+  <app-hero appTrackSection="hero" />
+  <app-nav />
 
-  <div class="ticker-strip" aria-hidden="true">
-    <div class="ticker-track">
-      <span>Angular</span><span class="sep">◆</span>
-      <span>Java</span><span class="sep">◆</span>
-      <span>Spring Boot</span><span class="sep">◆</span>
-      <span>TypeScript</span><span class="sep">◆</span>
-      <span>Full-Stack Engineer</span><span class="sep">◆</span>
-      <span>PostgreSQL</span><span class="sep">◆</span>
-      <span>REST APIs</span><span class="sep">◆</span>
-      <span>Open to Work</span><span class="sep">◆</span>
-      <span>Angular</span><span class="sep">◆</span>
-      <span>Java</span><span class="sep">◆</span>
-      <span>Spring Boot</span><span class="sep">◆</span>
-      <span>TypeScript</span><span class="sep">◆</span>
-      <span>Full-Stack Engineer</span><span class="sep">◆</span>
-      <span>PostgreSQL</span><span class="sep">◆</span>
-      <span>REST APIs</span><span class="sep">◆</span>
-      <span>Open to Work</span><span class="sep">◆</span>
-    </div>
-  </div>
+  <main>
+    <app-demo appTrackSection="demo" />
+    <app-work appTrackSection="work" />
+    <app-record appTrackSection="record" />
+    <app-craft appTrackSection="craft" />
+    <app-off-the-clock appTrackSection="off-the-clock" />
+    <app-hello appTrackSection="hello" />
+  </main>
 
-  <app-about appTrackSection="about"></app-about>
-  <app-experience appTrackSection="experience"></app-experience>
-  <app-projects appTrackSection="projects"></app-projects>
-  <app-skills appTrackSection="skills"></app-skills>
-  <app-events appTrackSection="events"></app-events>
-  <app-outside-the-ide appTrackSection="outside-the-ide"></app-outside-the-ide>
-  <app-contact appTrackSection="contact"></app-contact>
-</main>
-<footer>
-  <div class="container">
-    <p>Built with Angular &amp; ☕ by Alayna Johnston</p>
-    <div class="footer-meta">
-      <span class="footer-mark" aria-hidden="true">AJ · 2026</span>
+  <footer>
+    <span>© 2026 Alayna Johnston</span>
+    <span class="footer-meta">
+      <span>Installable · works offline · written by hand</span>
       <span class="footer-version">v{{ version }}</span>
-    </div>
-  </div>
-</footer>
+    </span>
+  </footer>
+</div>

@@ -1,24 +1,34 @@
 import { Injectable, signal, effect } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+export type Theme = 'light' | 'dark';
+
+const STORAGE_KEY = 'theme';
+
+@Injectable({ providedIn: 'root' })
 export class ThemeService {
-  isDark = signal<boolean>(true);
+  readonly theme = signal<Theme>(ThemeService.initial());
 
   constructor() {
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.isDark.set(saved ? saved === 'dark' : prefersDark);
-
     effect(() => {
-      const dark = this.isDark();
-      document.body.classList.toggle('light-mode', !dark);
-      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      const theme = this.theme();
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem(STORAGE_KEY, theme); } catch { /* storage unavailable */ }
     });
   }
 
+  isDark(): boolean {
+    return this.theme() === 'dark';
+  }
+
   toggle() {
-    this.isDark.update(v => !v);
+    this.theme.update(t => (t === 'dark' ? 'light' : 'dark'));
+  }
+
+  private static initial(): Theme {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'light' || saved === 'dark') return saved;
+    } catch { /* storage unavailable */ }
+    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 }
