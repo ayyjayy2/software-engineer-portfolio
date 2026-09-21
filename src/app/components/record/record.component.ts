@@ -25,8 +25,8 @@ export class RecordComponent {
     { n: '546', what: 'peer pull requests reviewed — 306 in 2026 alone' },
     { n: '65', what: 'repositories touched: Angular, Java services, data pipelines' },
     { n: '33', what: 'internal engineering guides written and kept as team reference' },
-    { n: '32', what: 'technical spikes run to de-risk work before commitment' },
-    { n: '7→4', what: 'days average story completion, while output doubled to 40 points a quarter' },
+    { n: '418', what: 'story points delivered, 65% of stories scoped at 2\u20133 points' },
+    { n: '24', what: 'features demoed to the team across 19 quarters' },
   ];
 
   timeline: TimelineEntry[] = [
