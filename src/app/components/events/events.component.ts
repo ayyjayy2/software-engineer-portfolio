@@ -20,7 +20,7 @@ export class EventsComponent {
     {
       title: 'All Things AI',
       date: 'March 24, 2026',
-      location: 'In Person',
+      location: 'Durham, NC',
       type: 'Conference',
       description: 'Attended a full-day AI conference covering the latest developments in LLMs and AI-powered product development. Gained insight into how companies are integrating AI into their products and walked away with best practices for building with AI.',
       tags: ['AI', 'LLMs'],
