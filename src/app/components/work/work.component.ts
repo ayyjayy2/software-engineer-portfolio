@@ -26,10 +26,10 @@ export class WorkComponent {
     },
     {
       n: '02',
-      title: 'A year of patient privacy work',
-      body: 'The largest single share of a year-long privacy initiative: Angular UI, Java REST services and an Oracle record-linkage database, plus the design and test-case documentation the rest of the team built against.',
-      meta: '2023 – 2024',
-      stat: '20 of 36 stories',
+      title: 'Scoping the work, not just shipping it',
+      body: 'Ran 32 technical spikes to pin down unknowns before the team committed, then started writing the stories myself: 11 authored, 9 of them scoped for other engineers to pick up. Over the same stretch my quarterly output doubled from 19.8 to 40 story points and average story completion fell from 7 days to 4.',
+      meta: 'Ownership, year over year',
+      stat: '32 spikes \u00b7 11 stories authored',
     },
     {
       n: '03',
