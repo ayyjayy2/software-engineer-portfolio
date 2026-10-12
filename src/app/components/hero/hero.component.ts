@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToDirective } from '../../directives/scroll-to.directive';
 
 interface Fact {
   label: string;
@@ -6,6 +7,7 @@ interface Fact {
 }
 
 @Component({
+  imports: [ScrollToDirective],
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
