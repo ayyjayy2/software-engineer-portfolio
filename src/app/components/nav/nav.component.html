@@ -1,5 +1,5 @@
 <nav class="nav" aria-label="Sections">
   @for (link of links; track link.href) {
-    <a [href]="link.href"><span class="n">{{ link.n }}</span>{{ link.label }}</a>
+    <a appScrollTo [href]="link.href"><span class="n">{{ link.n }}</span>{{ link.label }}</a>
   }
 </nav>

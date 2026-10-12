@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollToDirective } from '../../directives/scroll-to.directive';
 
 interface NavLink {
   n: string;
@@ -7,6 +8,7 @@ interface NavLink {
 }
 
 @Component({
+  imports: [ScrollToDirective],
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
