@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { APP_VERSION } from './version';
+import { BUILD_DATE } from './build-info';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -30,4 +31,5 @@ import { TrackSectionDirective } from './directives/track-section.directive';
 })
 export class AppComponent {
   readonly version = APP_VERSION;
+  readonly buildDate = BUILD_DATE;
 }

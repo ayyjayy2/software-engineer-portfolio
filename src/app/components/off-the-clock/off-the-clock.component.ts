@@ -17,16 +17,10 @@ interface Pursuit {
 export class OffTheClockComponent {
   pursuits: Pursuit[] = [
     {
-      title: 'Cap & Asher',
-      subtitle: 'Game design · Unreal Engine 5 · ELVTR course',
-      description: 'A third-person cozy cat adventure where you play as cats investigating a missing necklace before your human’s big event. Explore a familiar home as a safe hub, then dive into hidden pocket micro-worlds — a bathtub floating market, a blanket bazaar — solving light puzzles and following clues through charming, imaginative spaces.',
-      tag: 'In progress',
-    },
-    {
       title: 'Loftia',
-      subtitle: 'Indie game · alpha & beta tester',
-      description: 'A cyberpunk-earthy indie game I’ve followed from the beginning — I became an alpha play tester and will be part of the upcoming beta, too.',
-      tag: 'In progress',
+      subtitle: 'Indie game · playtester every round so far',
+      description: 'A cyberpunk-earthy indie game I’ve followed from the beginning and playtested in every round so far: 26 bugs filed in the first round, 14 in the latest.',
+      tag: 'Playtester',
     },
     {
       title: 'Private pilot',
@@ -36,7 +30,7 @@ export class OffTheClockComponent {
     },
     {
       title: 'World traveler',
-      subtitle: '24 countries · 26 U.S. states & counting',
+      subtitle: '25 countries · 26 U.S. states & counting',
       description: 'Exploring different cultures, systems, and ways of life fuels how I think about building products. Spending time studying abroad in Thailand at Mahidol University was a formative experience — and the travel bug has never let up since.',
     },
     {

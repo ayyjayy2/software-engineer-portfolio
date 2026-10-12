@@ -9,8 +9,6 @@ import {
   viewChild,
 } from '@angular/core';
 
-/** The production app, for visitors who want to sign up and use it for real. */
-export const ITINERISTS_URL = 'https://the-itinerists.web.app/home';
 /** The sign-in-free demo build, seeded with a sample trip. Session-only data. */
 export const ITINERISTS_DEMO_URL = 'https://the-itinerists-demo.web.app/home';
 

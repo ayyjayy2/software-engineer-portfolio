@@ -41,9 +41,9 @@ export class WorkComponent {
     {
       n: '04',
       title: 'rb-create, so nobody cuts a branch by hand',
-      body: 'Release-branch automation published to the team’s internal GitHub marketplace. What was a manual checklist across 23 release branches became a repeatable workflow that proves regressions are clean before the branch exists.',
+      body: 'Release-branch automation published to the team’s internal GitHub marketplace. The checklist I had run by hand for 23 of my own release cuts over 8 quarters became a repeatable workflow anyone on the team can use, one that proves regressions are clean before the branch exists.',
       meta: 'Internal tooling',
-      stat: '23 branches, 8 quarters',
+      stat: '23 of my own cuts, now automated',
     },
   ];
 }
