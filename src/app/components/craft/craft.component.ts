@@ -14,9 +14,9 @@ interface StackGroup {
 })
 export class CraftComponent {
   stacks: StackGroup[] = [
-    { name: 'Frontend', items: 'Angular, TypeScript, RxJS, HTML/CSS, design systems, PWAs and service workers' },
+    { name: 'Frontend & mobile', items: 'Angular, TypeScript, RxJS, HTML/CSS, design systems, PWAs and service workers, Capacitor for iOS' },
     { name: 'Backend', items: 'Java, Spring Boot, REST APIs, microservices, Firebase and Firestore with auth and security rules' },
-    { name: 'Data & delivery', items: 'Oracle SQL, GCP BigQuery, data ingestion pipelines, Jenkins CI/CD, release management, unit and regression testing' },
+    { name: 'Data & delivery', items: 'Oracle SQL, GCP BigQuery, data ingestion pipelines, Jenkins and GitHub Actions CI/CD, release management, unit, end-to-end (Playwright) and security-rules testing' },
     { name: 'Weekly', items: 'Git, GitHub, Jira, Swagger, Insomnia, Firebase emulator, PowerShell, Claude Code, Copilot' },
   ];
 }

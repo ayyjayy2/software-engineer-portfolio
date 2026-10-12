@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PhoneFrameComponent, ITINERISTS_URL } from '../phone-frame/phone-frame.component';
+import { PhoneFrameComponent } from '../phone-frame/phone-frame.component';
 import { RevealDirective } from '../../directives/reveal.directive';
 
 @Component({
@@ -9,5 +9,5 @@ import { RevealDirective } from '../../directives/reveal.directive';
   styleUrl: './demo.component.scss',
 })
 export class DemoComponent {
-  readonly appUrl = ITINERISTS_URL;
+  readonly repoUrl = 'https://github.com/ayyjayy2/the-itinerists';
 }

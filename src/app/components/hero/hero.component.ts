@@ -14,7 +14,7 @@ export class HeroComponent {
   facts: Fact[] = [
     { label: 'In the industry', value: 'Since 2021' },
     { label: 'Based in', value: 'Chicago, IL' },
-    { label: 'Open to', value: 'Remote or hybrid' },
+    { label: 'Open to', value: 'Remote roles' },
     { label: 'Stack', value: 'Angular · Java · Firebase' },
   ];
 }
